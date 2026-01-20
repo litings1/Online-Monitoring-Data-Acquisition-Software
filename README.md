@@ -20,7 +20,7 @@
 ## 🧩 系统总体架构
 
 <p align="center">
-  ![架构图](images/ScreenShot_main.png)
+  ![架构图](main/images/ScreenShot_main.png)
 </p >
 
 说明：
