@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskBase</name>
+    </assembly>
+    <members>
+        <member name="T:sysu.AQM.TaskBase.TaskScriptBase">
+            <summary>
+            任务脚本的基类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.Instruments">
+            <summary>
+            仪器列表，引用而来，用于任务运行前的更新
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.method">
+            <summary>
+            本脚本执行的方法
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.taskParameterInputRecord">
+            <summary>
+            脚本参数字典,用于所需参数的记录、获得
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase._taskParameterForRun">
+            <summary>
+            运行中所使用的参数
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.TaskError">
+            <summary>
+            任务出错
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.returnDebugInfoAction">
+            <summary>
+            发送调试命令事件
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.WriteInsDbgInfoFlag">
+            <summary>
+            是否读入仪器调试信息
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.GetInsDebugInf">
+            <summary>
+            仪器（串口）返回信息事件
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.MyData">
+            <summary>
+            缓冲二维数组
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase._ScriptName">
+            <summary>
+            脚本名称
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.locker">
+            <summary>
+            与程序共用的锁，锁住仪器字典的标识添加模块
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.ItemCurrent">
+            <summary>
+            当前操作项目名称
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.taskDescribeAction">
+            <summary>
+            任务步骤描述返回字段
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.debbugShowAction">
+            <summary>
+            记录调试信息输出时间
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.TaskScriptBase.ctrlLib">
+            <summary>
+            驱动操作接口
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.NullMethod(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.SetName(System.String,System.String)">
+            <summary>
+            设置所属任务组与任务的名称
+            </summary>
+            <param name="TaskGroupNameIn">任务组名称</param>
+            <param name="TaskNameIn">任务名称，注意是任务组中任务的名称，与脚本的名称不一定一样</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.FindMethod">
+            <summary>
+            获得本类可执行任务
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.SetParameter(sysu.AQM.MonitorBase.paraDictionary,System.Boolean)">
+            <summary>
+            以字典方式输入任务运行参数
+            </summary>
+            <param name="paraDicIn">输入参数字典</param>
+            <param name="useDefaultValue">是否使用默认值</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Setparameter(sysu.AQM.MonitorBase.TaskParameter)">
+            <summary>
+            输入单个任务运行参数
+            </summary>
+            <param name="taskParaIn">输入字典</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.FindParameters">
+            <summary>
+            获得目前任务所需的各种参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Run(sysu.AQM.MonitorBase.TaskMode,sysu.AQM.MonitorBase.TaskParameter)">
+            <summary>
+            运行本任务脚本
+            </summary>
+            <param name="taskModeIn">任务运行模式</param>
+            <param name="taskParaIn">任务运行参数，若为null，则使用本实例自带参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.FindTaskName">
+            <summary>
+            找出所能运行任务的名字
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.InitializeTask(sysu.AQM.MonitorBase.TaskMode)">
+            <summary>
+            初始化任务
+            </summary>
+            <param name="taskModeIn">任务模式</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.RequirePara(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            返回任务要求的参数
+            </summary>
+            <param name="parameterName">参数名称</param>
+            <param name="defaultValue">参数默认值，可以为空</param>
+            <param name="describtion">参数描述</param>
+            <param name="ChangeEnable">是否允许自动设置[备用，默认为true]</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.RegeditDebugAction(System.Action{System.String,System.String})">
+            <summary>
+            注册debug时间，以返回debug信息
+            </summary>
+            <param name="actionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.UnregeditDebugAction(System.Action{System.String,System.String})">
+            <summary>
+            反注册debug事件
+            </summary>
+            <param name="actionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.returnDebugInfo(System.String)">
+            <summary>
+            把信息记录到调试信息中
+            </summary>
+            <param name="DescribeIn">待显示的信息</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.WriteInsDbg(System.String)">
+            <summary>
+            触发debug语句写出事件，写出从仪器传来的dubug语句
+            </summary>
+            <param name="debugInfoIn">从仪器传来的dubug语句</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.ShowValue(System.Object)">
+            <summary>
+            调试模式用，显示一个参数
+            </summary>
+            <param name="valueIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.ShowValue(System.String,System.Object)">
+            <summary>
+            调试模式用，显示一个参数,带名称
+            </summary>
+            <param name="valueNameIn">参数名称</param>
+            <param name="valueIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.SetTaskCheck(System.Boolean)">
+            <summary>
+            设置任务运行模式为检查参数，不涉及到具体仪器的调用
+            </summary>
+            <param name="taskCheck"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.RegeditStepDescribeAction(System.Action{System.String})">
+            <summary>
+            注册步骤描述事件
+            </summary>
+            <param name="ActionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.LogOutStepDescribeAction(System.Action{System.String})">
+            <summary>
+            注销步骤描述事件
+            </summary>
+            <param name="ActionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.alert(System.Object)">
+            <summary>
+            显示对话框
+            </summary>
+            <param name="valueIn">待展示的字符串</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.InsRun(System.String,System.String,System.Object[],System.String)">
+            <summary>
+            根据项目名称及任务名称，执行一项仪器的一个任务
+            </summary>
+            <param name="itemNameIn">项目名称</param>
+            <param name="TaskNameIn">任务名称</param>
+            <param name="parametersIn">任务执行参数</param>
+            <param name="valueType">返回类型，不填返回原值，"decimal"/"int"/"double"/"float"返回数字,"bool"返回bool</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.FindMethodeFail(System.Collections.Generic.List{System.Type},System.String,System.String)">
+            <summary>
+            查找方法失败
+            </summary>
+            <param name="TypeLst"></param>
+            <param name="itemNameIn"></param>
+            <param name="TaskNameIn"></param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.CheckValue(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="valueType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.ReturnData(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            返回任务数据
+            </summary>
+            <param name="dataName">数据名称</param>
+            <param name="value">数据值</param>
+            <param name="describtion">数据描述</param>
+            <param name="cover">有相同项时是否覆盖,false时附加在后面,以空格隔开</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.TaskSucceed(System.Boolean)">
+            <summary>
+            记录任务运行是否成功
+            </summary>
+            <param name="succeed">是否成功</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.TaskDispose">
+            <summary>
+            任务结束后处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.GetPara(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            获得参数值
+            </summary>
+            <param name="parameterNameIn">参数名称</param>
+            <param name="defaultValueIn">默认值，若参数不存在则返回此值</param>
+            <param name="valueType">返回类型，不填返回null，"decimal"/"int"/"double"/"float"返回数字,"bool"返回bool</param>
+            <param name="showDebugInfo">是否显示调试信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Record(System.String,System.Object,System.String)">
+            <summary>
+            记录一项内容，可留待下次使用GetParameter函数读出，重名会覆盖
+            </summary>
+            <param name="dataName">内容名称</param>
+            <param name="value">内容值</param>
+            <param name="describtion">内容描述</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.CorrectFunction(System.Decimal,System.String,System.String,System.Boolean)">
+            <summary>
+            把参数按照线性方程进行修正
+            </summary>
+            <param name="originValue">待修正参数</param>
+            <param name="slopeName">斜率参数名称，若无，设为1</param>
+            <param name="interceptName">截距参数名称，若无，设为0</param>
+            <param name="positive">为false时，进行修正方程的逆运算，返回修正前的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Sign(System.String,System.String,System.Boolean)">
+            <summary>
+            标识操作
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Sign">待添加标识</param>
+            <param name="AddSignFlag">添加标记还是删除标记的布尔值，true为添加标记,false为删除标记</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.anaSign(System.String,System.String,System.Boolean)">
+            <summary>
+            分析并返回标识
+            </summary>
+            <param name="OriStrIn">记录标识的原字段</param>
+            <param name="SignIn">标识</param>
+            <param name="AddSign">是否添加标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.AddSign(System.String,System.String)">
+            <summary>
+            添加仪器标识
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Sign">项目标识</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.RemoveSign(System.String,System.String)">
+            <summary>
+            去除仪器表中的标记
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Sign">标记</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.GetPrinter(System.String)">
+            <summary>
+            根据模板文件名称获得一个打印实例,若输出文件地址及脚本存在，可自动填入
+            </summary>
+            <param name="modeNameIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.GetSign(System.String)">
+            <summary>
+            获得项目当前标记,获取失败返回null
+            </summary>
+            <param name="itemIn">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Ins(System.String)">
+            <summary>
+            获得一台仪器及其参数
+            </summary>
+            <param name="insName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Sleep(System.Int32)">
+            <summary>
+            进程睡眠一段时间
+            </summary>
+            <param name="millisecondIn">睡眠时间，以毫秒为单位</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.StepDescribe(System.String)">
+            <summary>
+            脚本进行步骤的描述，用于说明解析，与具体执行无关
+            </summary>
+            <param name="descirbeIn">描述语句</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.等待仪器稳定(System.Object,System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+            等待仪器稳定
+            </summary>
+            <param name="ItemNameIn">项目名称</param>
+            <param name="targetValue">界定仪器已稳定的数值，建议为仪器量程的千分之一到万分之一</param>
+            <param name="unitSecondsIn">统计周期,以秒为单位，总体等待时间约为统计周期的整数倍，默认为5分钟</param>
+            <param name="cycleSecondsIn">数采周期，所获得数据用以判定仪器是否以稳定，以秒为单位，不多于统计周期的三分之一，默认为30秒</param>
+            <param name="MaxSecondsIn">最多等待时间，超过则返回等待失败（false）,默认为45分钟</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.等待仪器稳定(System.Object,System.Object)">
+            <summary>
+            等待仪器稳定
+            </summary>
+            <param name="itemNameIn">项目名称</param>
+            <param name="tagetValue">界定仪器已稳定的数值，建议为仪器量程的千分之一到万分之一</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.等待仪器稳定(System.Object,System.Object,System.Object)">
+            <summary>
+            等待仪器稳定
+            </summary>
+            <param name="itemNameIn">项目名称</param>
+            <param name="MaxSeconds">最长运行时间</param>
+            <param name="tagetValue">界定仪器已稳定的数值，建议为仪器量程的千分之一到万分之一</param>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.CalStableValue(System.Collections.Generic.List{System.Decimal})">
+            <summary>
+            计数数据稳定度
+            </summary>
+            <param name="valLstIn">待统计数据</param>
+            <returns>稳定度</returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Send(System.String,System.String)">
+            <summary>
+            向项目所代表的仪器发送一个数据，ASCII码形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Value">发送内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.SendHex(System.String,System.String)">
+            <summary>
+            向项目所代表的仪器发送一个数据，16进制形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Value">发送内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.Receive(System.String)">
+            <summary>
+            接收所有返回值，ASCII形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.ReceiveHex(System.String)">
+            <summary>
+            接收所有返回值，十六进制形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.TaskScriptBase.GetParaNames">
+            <summary>
+            获得任务脚本所有可获得的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.TaskBase.TaskScriptBase.ScriptName">
+            <summary>
+            脚本名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.TaskBase.TaskScriptBase.TaskGroupName">
+            <summary>
+            任务组名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.TaskBase.TaskScriptBase.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.TaskBase.TaskScriptBase.TaskCheck">
+            <summary>
+            检查任务参数，不调用仪器，任务运行一次后自动设为false
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.TaskBase.DataArr">
+            <summary>
+            数组
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.TaskBase.DataArr._datas">
+            <summary>
+            记录数据实体
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.DataArr.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.TaskBase.DataArr.SetReturnAction(System.Action{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="actionIn"></param>
+        </member>
+        <member name="P:sysu.AQM.TaskBase.DataArr.Item(System.Int32,System.Int32)">
+            <summary>
+            根据行列序号返回一个string
+            </summary>
+            <param name="i">行号</param>
+            <param name="j">列号</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

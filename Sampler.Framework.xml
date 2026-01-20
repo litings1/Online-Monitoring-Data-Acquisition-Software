@@ -1,0 +1,1287 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sampler.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Sampler.Framework.Driver.CsType">
+            <summary>
+            校验类型
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.FormatDateTime(System.Object,System.String,System.String)">
+            <summary>
+            格式化时间
+            </summary>
+            <param name="dateTime">输入的时间，可为DateTime类型或String类型</param>
+            <param name="preFormat">格式化前的时间格式</param>
+            <param name="outFormat">格式化后的时间格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.FormatDateTime(System.Object,System.String)">
+            <summary>
+            格式化时间为默认格式 yyyy-MM-dd HH:mm:ss
+            </summary>
+            <param name="dateTime"></param>
+            <param name="outFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.Hex4BToDec(System.String,System.Boolean)">
+            <summary>
+            解四字节浮点数
+            </summary>
+            <param name="input">四字节十六进制数据（如：AA BB CC DD）</param>
+            <param name="reverse">是否倒置高低位（如：AA BB CC DD 倒置后变为 CC DD AA BB）</param>
+            <returns>浮点数</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.DecToHex4B(System.Object,System.Boolean)">
+            <summary>
+            浮点数转为四字节十六进制数
+            </summary>
+            <param name="input">浮点数</param>
+            <param name="reverse">是否将结果的高低位倒置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.FloatToDec(System.Object)">
+            <summary>
+            解科学记数法（即float转换为decimal）
+            </summary>
+            <param name="input">科学记数法形式数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.HexToDec(System.String)">
+            <summary>
+            将十六进制数转换为十进制整数
+            </summary>
+            <param name="input">十六进制数</param>
+            <returns>十进制数</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.DecToHex(System.Object)">
+            <summary>
+            将十进制整数据转换为十六进制数
+            </summary>
+            <param name="input">十进制整数</param>
+            <returns>十六进制数</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.HexToString(System.String)">
+            <summary>
+            将十六进制数转换成字符串
+            </summary>
+            <param name="input">十六进制数</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.StringToHex(System.String)">
+            <summary>
+            字符串转换成十六进制数
+            </summary>
+            <param name="input">字符串</param>
+            <returns>十六进制数（大写）</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.ReverseHex(System.String)">
+            <summary>
+            倒转十六进制数的高低位
+            实例一：
+            输入：01 02 03 04
+            输出：04 03 02 01
+            实例二：
+            输入：01 02 03
+            输出：03 02 01
+            </summary>
+            <param name="hex">十六进制数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.HexToBin(System.String)">
+            <summary>
+            十六进制数转二进制数
+            </summary>
+            <param name="input">十六进制数</param>
+            <returns>二进制数</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.DecToBin(System.Object)">
+            <summary>
+            十进制数转二进制数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.BinToDec(System.String)">
+            <summary>
+            二进制数转十进制数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.BinToHex(System.String)">
+            <summary>
+            二进制数转十六进制数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.Hex2cToDec(System.String,System.Boolean)">
+            <summary>
+            将两字节十六进制补码转为十进制数（高位在前，低位在后）
+            </summary>
+            <param name="input"></param>
+            <param name="reverse">是否倒转十六进制的高低位，true：倒置； false：不倒置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.Delay(System.Int32)">
+            <summary>
+            延时（单位：毫秒）
+            </summary>
+            <param name="delayTime"></param>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.Split(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="rules"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.SubString(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取指定位置的子字符串
+            </summary>
+            <param name="input">字符串</param>
+            <param name="startIndex">开始位置</param>
+            <param name="length">长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.SubHex(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取指定位置字节的十六进制数
+            </summary>
+            <param name="input"></param>
+            <param name="startIndex"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.FormatDec(System.Object,System.Int32,System.Int32)">
+            <summary>
+            格式化数字
+            </summary>
+            <param name="data"></param>
+            <param name="intBit"></param>
+            <param name="decBit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.Contains(System.String,System.String)">
+            <summary>
+            判断字符串中是否存在某个子字符串
+            </summary>
+            <param name="input">被检查的字符串</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.DeleteEmpty(System.String)">
+            <summary>
+            去除字串空白
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.PPBToMg(System.String,System.Object)">
+            <summary>
+            ppb转mg/m3
+            </summary>
+            <param name="pCode">分子式</param>
+            <param name="value">数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.PPBToUg(System.String,System.Object)">
+            <summary>
+            ppb转ug/m3
+            </summary>
+            <param name="pCode">分子式</param>
+            <param name="value">数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.PPMToMg(System.String,System.Object)">
+            <summary>
+            ppm转mg/m3
+            </summary>
+            <param name="pCode">分子式</param>
+            <param name="value">数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.PPMToUg(System.String,System.Object)">
+            <summary>
+            ppm转ug/m3
+            </summary>
+            <param name="pCode">分子式</param>
+            <param name="value">数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.MgToPPB(System.String,System.Object)">
+            <summary>
+            mg/m3转ppb
+            </summary>
+            <param name="pCode"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.MgToPPM(System.String,System.Object)">
+            <summary>
+            mg/m3转ppm
+            </summary>
+            <param name="pCode"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.UgToPPB(System.String,System.Object)">
+            <summary>
+            ug/m3转ppb
+            </summary>
+            <param name="pCode"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Tool.UgToPPM(System.String,System.Object)">
+            <summary>
+            ug/m3转ppm
+            </summary>
+            <param name="pCode"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Sampler.Framework.Events.NotifyManager.ClearMessage">
+            <summary>
+            清空信息时触发
+            </summary>
+        </member>
+        <member name="E:Sampler.Framework.Events.NotifyManager.ShowMessage">
+            <summary>
+            打印信息时触发
+            </summary>
+        </member>
+        <member name="E:Sampler.Framework.Events.NotifyManager.SamplerResetNotify">
+            <summary>
+            数采模块重启时触发
+            </summary>
+        </member>
+        <member name="E:Sampler.Framework.Events.NotifyManager.MonitorNotify">
+            <summary>
+            用于调试通讯状态
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMethodSupport.StartMethod(System.String,System.Object[])">
+            <summary>
+            运行一个方法
+            </summary>
+            <param name="methodName">方法名称</param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMethodSupport.MethodExist(System.String)">
+            <summary>
+            方法是否存在
+            </summary>
+            <param name="methodName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMethodSupport.MethodParas(System.String)">
+            <summary>
+            方法所需参数
+            </summary>
+            <param name="methodName">方法名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMethodSupport.GetMethods">
+            <summary>
+            获得所有支持的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.StartMethod(System.String,System.Object[])">
+            <summary>
+            运行一个方法
+            </summary>
+            <param name="methodName">方法名</param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.MethodExist(System.String)">
+            <summary>
+            判断是否存在某个方法
+            </summary>
+            <param name="methodName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.MethodParas(System.String)">
+            <summary>
+            返回指定方法的参数
+            </summary>
+            <param name="methodName"></param>
+            <returns>若不存在该方法，返回null</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.GetMethods">
+            <summary>
+            获取全部方法（Public）
+            </summary>
+            <returns>若不存在，返回null</returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.Check(System.Object)">
+            <summary>
+            检查数据是否为空
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.Send(System.String)">
+            <summary>
+            发送命令
+            </summary>
+            <param name="cmd">命令</param>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.SendHex(System.String)">
+            <summary>
+            发送十六进制命令
+            </summary>
+            <param name="cmd">命令</param>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.Receive">
+            <summary>
+            接收全部数据
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.Receive(System.String)">
+            <summary>
+            接收指定格式的数据
+            </summary>
+            <param name="rules">匹配规则（格式：$$）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.ReceiveHex">
+            <summary>
+            接收十六进制数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.ReceiveHex(System.String)">
+            <summary>
+            接收十六进制数据（接收符合指定格式的数据）
+            </summary>
+            <param name="rules">匹配规则（格式：$$）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.SupportLib.ReceiveHex(Sampler.Framework.Driver.CsType,System.String)">
+            <summary>
+            以十六进制形式接收数据
+            </summary>
+            <param name="checksumType">校验和类型</param>
+            <param name="character">特征码</param>
+            <returns></returns>
+        </member>
+        <member name="P:Sampler.Framework.Interfaces.IDevice.Visible">
+            <summary>
+            该项目是否显示在主界面
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.开始质控任务(System.Object[])">
+            <summary>
+            质控任务前的准备工作，如切换电磁阀
+            </summary>
+            <param name="args">
+            args[0]：零点、跨度、zero、span
+            args[1]：校准、检查
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.结束质控任务(System.Object[])">
+            <summary>
+            质控任务后的收尾工作
+            </summary>
+            <param name="args">暂未使用</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.读取零点修正值">
+            <summary>
+            暂时仅支持热电分析仪
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.读取跨度修正值">
+            <summary>
+            暂时仅支持热电分析仪
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.设置零点修正值">
+            <summary>
+            执行校准零点操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.设置跨度修正值(System.Object)">
+            <summary>
+            执行校准跨度操作
+            </summary>
+            <param name="arg">暂未使用</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IAnaDevice.读取历史小时值(System.Object,System.Object)">
+            <summary>
+            从分析仪器回补数据
+            </summary>
+            <param name="startDateTime"></param>
+            <param name="endDateTime"></param>
+            <returns>
+            参数一：时间
+            参数二：小时值数据
+            </returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IEMSDevice.GetSensorAddresses">
+            <summary>
+            获取监控主机当前接入的所有传感器的地址列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IEMSDevice.GetSensorValue(System.String)">
+            <summary>
+            获取指定地址传感器的当前读数
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sampler.Framework.Driver.BaseCalDevice">
+            <summary>
+            校准仪器基类
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.读取零气流量">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.读取标气流量">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.读取状态信息">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.读取报警信息">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.设置零气流量(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="gas">污染因子代号，如SO2、O3等</param>
+            <param name="value">单位不限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.设置标气流量(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="gas">污染因子代号，如SO2、O3等</param>
+            <param name="value">
+            这里的value作为数组用
+            value[0]：流量
+            value[1]：浓度
+            value[2]：臭氧紫外灯光强（实例88%应填88）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.ICalDevice.关闭标准源">
+            <summary>
+            关闭零气、标气、臭氧发生器
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.读取零气流量">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.读取标气流量">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.读取状态信息">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.读取报警信息">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.设置零气流量(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.设置标气流量(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Driver.BaseCalDevice.关闭标准源">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.AppSettings.SamplingPeriod">
+            <summary>
+            采样周期
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.Driver.SingleArgs">
+            <summary>
+            单个项目的参数信息类
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.SamplingPeriod">
+            <summary>
+            采样周期
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DriverName">
+            <summary>
+            驱动名称（如SO2_TE_43）
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DriverFolder">
+            <summary>
+            驱动路径
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.TimeToLive">
+            <summary>
+            数据生存时间，有效范围：60~3600
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.MediumType">
+            <summary>
+            接口类型（如：网口、数字口、模拟口）
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DelayTime">
+            <summary>
+            通讯延时时间
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DelayCount">
+            <summary>
+            通讯延时时间
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.PortName">
+            <summary>
+            串口号（如COM1）
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.BaudRate">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.Parity">
+            <summary>
+            校验位
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DataBits">
+            <summary>
+            数据位
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.StopBits">
+            <summary>
+            停止位
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.RTS">
+            <summary>
+            握手协议
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DTR">
+            <summary>
+            握手协议
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.ProtocolType">
+            <summary>
+            UDP或TCP
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.SendTimeout">
+            <summary>
+            发送超时
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.ReceiveTimeout">
+            <summary>
+            接收超时
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.Channel">
+            <summary>
+            仪器或项目连接模数转换器的通道号
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.SrcUnit">
+            <summary>
+            仪器输出单位
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DestUnit">
+            <summary>
+            目标入库单位
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.DispUnit">
+            <summary>
+            界面显示单位
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.IsParallel">
+            <summary>
+            是否并行
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.IsReadAlarm">
+            <summary>
+            是否读取报警信息
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.IsReadStatus">
+            <summary>
+            是否读取状态信息
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.IsUpdateReal">
+            <summary>
+            指示分析仪数据是否实时更新
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.UpdateDataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.MagValveType">
+            <summary>
+            是否内置电磁阀
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.Address">
+            <summary>
+            仪器地址
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.RangeL">
+            <summary>
+            量程下限
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.RangeH">
+            <summary>
+            量程上限
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.AlarmL">
+            <summary>
+            报警下限
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.AlarmH">
+            <summary>
+            报警上限
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.AnalogL">
+            <summary>
+            模拟电压下限
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.SingleArgs.AnalogH">
+            <summary>
+            模拟电压上限
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.StatusEty.Name">
+            <summary>
+            状态参数名称
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.StatusEty.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Driver.StatusEty.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.ConvertHelper.HexToByte(System.String)">
+            <summary>
+            十六进制数转字节数组
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.ConvertHelper.ByteToHex(System.Byte[])">
+            <summary>
+            字节数据转十六进制数
+            </summary>
+            <param name="data">字节数组</param>
+            <returns>十六进制数（大写）</returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.ConvertHelper.StringToByte(System.String)">
+            <summary>
+            将字符串转为字节数组
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.ConvertHelper.ByteToString(System.Byte[])">
+            <summary>
+            将字节数组转换为字符串
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Driver.Checksum.CRCHelper.ConvertToByteData(System.String)">
+            <summary>
+            将十六进制转为字节数组
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.DefValHelper.#cctor">
+            <summary>
+            启动时读入配置
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.EncryptHelper.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="pToEncrypt"></param>
+            <param name="sKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.EncryptHelper.Decrypt(System.String,System.String)">
+            <summary>
+            进行DES解密。
+            </summary>
+            <param name="pToDecrypt">要解密的以Base64</param>
+            <param name="sKey">密钥，且必须为8位。</param>
+            <returns>已解密的字符串。</returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FileHelper.Decryption(System.String,System.String)">
+            <summary>
+            以异或方式解密字符串 
+            PWD：MyConfig
+            </summary>
+            <param name="strInput"></param>
+            <param name="passWordIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FileHelper.Encryption(System.String,System.String)">
+            <summary>
+            以异或方式加密字符串
+            PWD：MyConfig
+            </summary>
+            <param name="strInput"></param>
+            <param name="passWordIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FileHelper.Decryption(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="strInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FileHelper.Encryption(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="strInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FileHelper.GetDirectories(System.String)">
+            <summary>
+            获取指定路径的文件夹
+            </summary>
+            <param name="path">文件夹路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FileHelper.GetFiles(System.String,System.String)">
+            <summary>
+            获取指定路径指定格式文件
+            </summary>
+            <param name="path">文件夹路径</param>
+            <param name="pattern">格式（如*.dll）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FormatHelper.FormatString(System.String,System.Boolean)">
+            <summary>
+            格式化打印字符串
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FormatHelper.FormatString(System.String)">
+            <summary>
+            格式化打印字符串
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.FormatHelper.FormatArray(System.Array)">
+            <summary>
+            格式化数组
+            </summary>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.ParserHelper.ParseMixToByte(System.String)">
+            <summary>
+            将命令由字符串形式转为字节数组形式
+            </summary>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.ParserHelper.ParseToBtye(System.String)">
+            <summary>
+            将{0x0d}与{13}形式的数据转为字节数组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.RegexHelper.GetPattern(System.String)">
+            <summary>
+            解析规则，转换为正则表达式中的pattern
+            </summary>
+            <param name="rules"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.RegexHelper.GetGroupValue(System.String,System.String)">
+            <summary>
+            获取所有捕获组中的值
+            </summary>
+            <param name="data"></param>
+            <param name="pattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.SerialPortHelper.GetPortNames">
+            <summary>
+            获取串口名数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.UnitHelper.#cctor">
+            <summary>
+            启动时读入配置
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.UnitHelper.GetAllSrcUnit(System.String)">
+            <summary>
+            获取指定项目的所有原始单位
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Helpers.UnitHelper.GetAllDestUnit(System.String)">
+            <summary>
+            获取指定项目的所有目标单位
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sampler.Framework.ModuleConfig">
+            <summary>
+            系统模块和功能定义
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.ModuleConfig.ProductCatalog">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.ModuleConfig.AllConditionDB">
+            <summary>
+            所有常规污染物（气态和颗粒物），数据库均存储标实况两套数据
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.ModuleConfig.NoDataEntityInDb">
+            <summary>
+            所有污染物监测值均不写入数据库
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.ModuleConfig.ProductCatalogEnum">
+            <summary>
+            产品类别枚举
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ModuleConfig.ProductCatalogEnum.Station">
+            <summary>
+            国家版
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ModuleConfig.ProductCatalogEnum.BeiJing">
+            <summary>
+            北京版
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.ToRealCondition.GetConditionInfo">
+            <summary>
+            驱动获取工况实况信息
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.GetConditionInfo.TryGetPollutantCode(Sampler.Framework.Driver.BaseAnaDevice)">
+            <summary>
+            获取监测项编码
+            </summary>
+            <param name="device"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.GetConditionInfo.IsGetRealConditionData(Sampler.Framework.Driver.BaseAnaDevice)">
+            <summary>
+            当前需获取监测实况值
+            </summary>
+            <param name="device"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.GetConditionInfo.IsGetRealConditionHistory(Sampler.Framework.Driver.BaseAnaDevice,System.DateTime,System.DateTime)">
+            <summary>
+            特定的回补时间段需获取历史实况值
+            </summary>
+            <param name="device"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.GetConditionInfo.IsGetRealConditionHistory(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            特定的回补时间段需获取历史实况值
+            </summary>
+            <param name="device"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.GetConditionInfo.IsGetRealConditionHistory(System.String,System.DateTime)">
+            <summary>
+            特定的回补时间需获取历史实况值
+            </summary>
+            <param name="pollutantCode"></param>
+            <param name="timePoint"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sampler.Framework.ToRealCondition.IDriverSupport">
+            <summary>
+            标况转实况颗粒物驱动需要支持的接口
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.ToRealCondition.IDriverSupport.UpdateMethod">
+            <summary>
+            驱动升级方式
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.ToRealCondition.IDriverSupport.DriverReady">
+            <summary>
+            数采驱动已就绪（无需修改驱动或者修改调试完成）
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.ToRealCondition.IDriverGetInfo">
+            <summary>
+            标况转实况颗粒物驱动查询所需信息的接口
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.IDriverGetInfo.GetDataType(Sampler.Framework.Driver.BaseAnaDevice,System.String)">
+            <summary>
+            当前需获取监测值的数据类型
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.ToRealCondition.IDriverGetInfo.GetHistoryType(Sampler.Framework.Driver.BaseAnaDevice,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            需获取历史值的数据类型
+            </summary>
+            <param name="startTime">需获取历史值的开始时间</param>
+            <param name="endTime">需获取历史值的结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sampler.Framework.ToRealCondition.ConditionType">
+            <summary>
+            标况还是实况数据类型
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.ConditionType.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.ConditionType.RealCondition">
+            <summary>
+            实况
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.ConditionType.StandardCondition">
+            <summary>
+            标况
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.ConditionType.RealAndStandardCondition">
+            <summary>
+            标况和实况
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.ToRealCondition.DriverChangeMethod">
+            <summary>
+            驱动升级方式枚举
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.DriverChangeMethod.NoChange">
+            <summary>
+            不需要改动任何东西
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.DriverChangeMethod.WaitDeviceUpdate">
+            <summary>
+            等待仪器设置、固件升级、返厂即可
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.DriverChangeMethod.AlterDriver">
+            <summary>
+            修改数采驱动即可
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.ToRealCondition.DriverChangeMethod.AlterDriverDeviceUpdate">
+            <summary>
+            设备升级后还需修改驱动
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.Interfaces.DeviceDefVal">
+            <summary>
+            存储监测项目的默认设置
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.Interfaces.INIValue">
+            <summary>
+            定义该类便于数据绑定
+            </summary>
+        </member>
+        <member name="T:Sampler.Framework.Interfaces.IMonitor">
+            <summary>
+            与脚本层对接的接口，供俊威使用
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetAllUnitFormula">
+            <summary>
+            获取所有项目的 源单位、目标单位、转换公式；
+            注：包含不在监测的项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDispUnitFormula">
+            <summary>
+            获取所有正在监测项目的 源单位、显示单位、转换公式；
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDestUnitFormula">
+            <summary>
+            获取所有正在监测项目的 源单位、入库单位、转换公式；
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetRangeUnitFormula">
+            <summary>
+            获取所有正在监测项目的 源单位、量程报警单位、转换公式；
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetAlarmUnitFormula">
+            <summary>
+            获取所有正在监测项目的 源单位、报警单位、转换公式；
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDataType">
+            <summary>
+            分析仪数据是否实时更新（【数据类型】实时值：分析仪数据实时更新；小时值：分析仪数据每小时更新一次）
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetSamplingPeriod">
+            <summary>
+            采样周期
+            注：缺省值为15秒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetTimeToLive">
+            <summary>
+            获取所有正在监测项目对应的数据有效时间；
+            注：单位为秒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDriverNames">
+            <summary>
+            获取所有正在监测项目对应的驱动名称；
+            格式为：项目名_品牌_型号；
+            注：不包含后缀名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDeviceBrands">
+            <summary>
+            获取所有正在监测项目对应的品牌型号；
+            格式为：品牌_型号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDeviceAddress">
+            <summary>
+            获取所有正在监测仪器对应的地址（id）；
+            注：仪器不存在地址参数则返回-999
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDeviceRange">
+            <summary>
+            获取所有正在监测仪器的量程 下限 上限；
+            注：下限在前，上限在后
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDeviceAlarm">
+            <summary>
+            获取所有正在监测仪器的报警 下限 上限；
+            注：下限在前，上限在后
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Interfaces.IMonitor.GetDeviceConnectStatus">
+            <summary>
+            获取所有正在监测仪器的连接状态
+            </summary>
+            <returns>True 主采；False 并行</returns>
+        </member>
+        <member name="E:Sampler.Framework.Interfaces.IMonitor.Update">
+            <summary>
+            当AppSettings配置发生变化时触发事件
+            </summary>
+        </member>
+        <member name="E:Sampler.Framework.Interfaces.IMonitor.ShowMsg">
+            <summary>
+            当打印信息时触发
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Interfaces.IMonitor.SamplingPeriod">
+            <summary>
+            兼容接口，后面会废弃
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Modules.IConfiguration.TryLoad``1(``0@,Sampler.Framework.Driver.FileType,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="type">要保存的目标文件类型</param>
+            <param name="isBackupFile">true:加载备份配置 false:加载原配置</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sampler.Framework.Modules.IMonitoring">
+            <summary>
+            向外提供服务的唯一接口
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Send(System.String,System.String)">
+            <summary>
+            向指定项目发送ASCII格式数据
+            </summary>
+            <param name="itemName">项目名称（如SO2）</param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Send(System.String,System.String,Sampler.Framework.Modules.DataType)">
+            <summary>
+            向指定项目发送指定格式数据
+            </summary>
+            <param name="itemName"></param>
+            <param name="data"></param>
+            <param name="dataType">缺省为ASCII</param>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Receive(System.String)">
+            <summary>
+            接收指定项目的ASCII数据
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Receive(System.String,Sampler.Framework.Modules.DataType)">
+            <summary>
+            接收指定项目指定格式的数据
+            </summary>
+            <param name="itemName"></param>
+            <param name="dataType">缺省为ASCII</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Checkout(System.String)">
+            <summary>
+            检查指定项目是否含有ASCII数据
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Checkout(System.String,Sampler.Framework.Modules.DataType)">
+            <summary>
+            检查指定项目是否含有指定格式的数据
+            </summary>
+            <param name="itemName"></param>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Connect">
+            <summary>
+            连接通讯链路
+            </summary>
+        </member>
+        <member name="M:Sampler.Framework.Modules.ITransmission.Disconnect">
+            <summary>
+            关闭通讯链路
+            </summary>
+        </member>
+        <member name="P:Sampler.Framework.Modules.ITransmission.ConnectedDict">
+            <summary>
+            获取每个通讯链路的创建情况
+            项目-地址-是否建立成功
+            </summary>
+        </member>
+        <member name="F:Sampler.Framework.Modules.DataType.HEX">
+            <summary>
+            十六进制
+            </summary>
+        </member>
+    </members>
+</doc>

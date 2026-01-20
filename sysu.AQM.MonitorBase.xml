@@ -1,0 +1,1874 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>sysu.AQM.MonitorBase</name>
+    </assembly>
+    <members>
+        <member name="T:sysu.AQM.MonitorBase.ExcelPrinter">
+            <summary>
+            excel打印类，行号及列号均从1开始
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._ModelFileName">
+            <summary>
+            模板文件地址
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._TypeSet">
+            <summary>
+            排版方式
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._MaxRowId">
+            <summary>
+            最大行序号
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._MaxColumnId">
+            <summary>
+            最大列序号
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._PrintScript">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._CellDictionary">
+            <summary>
+            单元格存储字典，以列号为关键字
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter.LibFilePath">
+            <summary>
+            结果库的文件夹地址,从全局参数中读入，不可变
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter.CurFilePath">
+            <summary>
+            最新库的文件夹地址，可变
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelPrinter._paraDic">
+            <summary>
+            参数字典，保存了所有打印可能用到的全局参数
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,sysu.AQM.MonitorBase.Typeset)">
+            <summary>
+            
+            </summary>
+            <param name="FileNameIn">模板文件地址</param>
+            <param name="OutputDirIn">输出文件夹地址</param>
+            <param name="ScriptIn">输出脚本</param>
+            <param name="StartColumnIn">初始列</param>
+            <param name="StartRowIn">初始行</param>
+            <param name="typeSetIn">排版方式</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.#ctor(sysu.AQM.MonitorBase.ExcelPrinter)">
+            <summary>
+            创建实例，并复制一个范本
+            </summary>
+            <param name="printerIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.ReadScript(System.String)">
+            <summary>
+            读入格式描述字段,写入单元格字典
+            </summary>
+            <param name="PrintScriptIn">格式描叙字段</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.WritePrintScript">
+            <summary>
+            重写格式描述字段
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.ReadLocate(System.String,System.Int32@,System.Int32@)">
+            <summary>
+            获得一格的坐标
+            </summary>
+            <param name="locateValueIn">格式为(column，row)</param>
+            <param name="column">返回的列号</param>
+            <param name="row">返回的行号</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.AddPara(System.String,System.Object)">
+            <summary>
+            添加一个项目
+            </summary>
+            <param name="Name">参数名称，可以为空</param>
+            <param name="valueIn">值，可以是单项或Array格式</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.Write(System.Object,System.Int32,System.Int32)">
+            <summary>
+            添加一个输出参数
+            </summary>
+            <param name="valueIn">参数值</param>
+            <param name="RowIn">行号，留空或为-1将自动设到空白处</param>
+            <param name="ColumeIn">列号，留空或为-1将自动设到空白处</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.SetType(sysu.AQM.MonitorBase.Typeset)">
+            <summary>
+            设置排版方式
+            </summary>
+            <param name="typeSet">横排或竖排</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.CopyFrom(sysu.AQM.MonitorBase.ExcelPrinter)">
+            <summary>
+            从一个实例复制
+            </summary>
+            <param name="OriPrinterIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.SetOutFilePath(System.String,System.String)">
+            <summary>
+            设置输出文件的文件夹，必须为绝对地址
+            </summary>
+            <param name="CurFilePathIn">最新文件夹地址，为空则不输出</param>
+            <param name="LibFilePathIn">文档库文件夹地址，为空则不输出</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.SetModelName(System.String)">
+            <summary>
+            设置模板文件地址，必须为绝对地址
+            </summary>
+            <param name="modelNameIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.SetFileName(System.String)">
+            <summary>
+            设置文件名称，不带地址
+            </summary>
+            <param name="FileNameIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.SetRefParaDic(sysu.AQM.MonitorBase.paraDictionary@)">
+            <summary>
+            设置引用的参数字典。打印前将检查此字典，填入空缺的值
+            </summary>
+            <param name="paraDicIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.Fill">
+            <summary>
+            往脚本填入参数
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.DelEmpty(System.String@,System.Collections.Generic.Dictionary{System.String,sysu.AQM.MonitorBase.ExcelCell}@)">
+            <summary>
+            输出前去除所有的空格，减少传输字节
+            </summary>
+            <param name="scriptIn"></param>
+            <param name="paraDicIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.Print(System.String)">
+            <summary>
+            打印文件
+            </summary>
+            <param name="fileNameIn">输出文件名称，不带地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.EvaluateSheet(NPOI.SS.UserModel.IWorkbook,NPOI.SS.UserModel.ISheet)">
+            <summary>
+            要求excel打开重计算
+            </summary>
+            <param name="workBook"></param>
+            <param name="sheet"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.PlusPrintAction(System.Action{System.String,System.String})">
+            <summary>
+            注册方法到打印时间，可返回打印的字段
+            </summary>
+            <param name="ActionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelPrinter.MinusPrintAction(System.Action{System.String,System.String})">
+            <summary>
+            卸载注册的事件
+            </summary>
+            <param name="ActionIn"></param>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.StartRow">
+            <summary>
+            默认输出的开始行
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.StartColumn">
+            <summary>
+            默认输出的开始列
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.PrintScript">
+            <summary>
+            描述图表的字段
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.FileName">
+            <summary>
+            模板文件名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.ExcelSaveMode">
+            <summary>
+            文档生成保存方式
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ExcelPrinter.PrintValid">
+            <summary>
+            是否允许打印，默认为true（允许）
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.Typeset">
+            <summary>
+            排版方式，分横排与竖排
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Typeset.Vertical">
+            <summary>
+            同项目竖排
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Typeset.Horizontal">
+            <summary>
+            同项目横排
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.ExcelSaveMode">
+            <summary>
+            文档生成方式
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelSaveMode.NewOnly">
+            <summary>
+            只生成最新库的
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelSaveMode.LibOnly">
+            <summary>
+            只生成文档库中的
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelSaveMode.NewDelBoth">
+            <summary>
+            最新库与文档库都生成，最新库的删掉同名任务
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelSaveMode.NewKeepBoth">
+            <summary>
+            最新库与文档库都生成，最新库保留同名任务
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.ExcelCell">
+            <summary>
+            自定义excel表中一格的信息
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelCell.Row">
+            <summary>
+            行序号
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelCell.Column">
+            <summary>
+            列序号
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelCell.value">
+            <summary>
+            单元格内容
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelCell.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelCell.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            构造单元格
+            </summary>
+            <param name="RowIn">行序号</param>
+            <param name="ColumnIn">列序号</param>
+            <param name="valueIn">值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelCell.ToString">
+            <summary>
+            单元格信息转化为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.ExcelCell.Read(System.String)">
+            <summary>
+            字符串转化为单元格
+            </summary>
+            <param name="recordIn"></param>
+            <returns></returns>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.ExcelOutputInfo">
+            <summary>
+            用于保存一个输出xls文件信息的类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelOutputInfo.xlsTmptName">
+            <summary>
+            表格名称，只用于临时标记，与最后输出名称无关
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelOutputInfo.xlsModerFileName">
+            <summary>
+            表格模板文件名称（带地址）
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelOutputInfo.xlsOutDirPath">
+            <summary>
+            表格输出文件夹
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.ExcelOutputInfo.xlsScript">
+            <summary>
+            表格描述字段
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.Helper">
+            <summary>
+            辅助类，有一些通用的函数,用于计算
+            </summary>
+            <summary>
+            辅助类，有一些通用的函数,用于数据库
+            </summary>
+            <summary>
+            辅助类，有一些通用的函数,用于文档输入输出
+            </summary>
+            <summary>
+            辅助类，有一些通用的函数,用于压缩解压
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Decimal)">
+            <summary>
+            输入公式及未知数，计算结果并返回
+            </summary>
+            <param name="functionIn">计算公式</param>
+            <param name="x">未知数x</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Decimal[])">
+            <summary>
+            输入公式及未知数，计算结果并返回,若方程有问题，返回-9999.9999
+            </summary>
+            <param name="functionIn">计算公式，未知数为x1,x2……xn</param>
+            <param name="datasIn">保存x1……xn的值，按x后的序号排序，其中[0]存放x1</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Int32)">
+            <summary>
+            输入公式及未知数，计算结果并返回
+            </summary>
+            <param name="functionIn">计算公式</param>
+            <param name="x">未知数x</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Int32[])">
+            <summary>
+            输入公式及未知数，计算结果并返回,若方程有问题，返回-9999.9999
+            </summary>
+            <param name="functionIn">计算公式，未知数为x1,x2……xn</param>
+            <param name="datasIn">保存x1……xn的值，按x后的序号排序，其中[0]存放x1</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Single)">
+            <summary>
+            输入公式及未知数，计算结果并返回
+            </summary>
+            <param name="functionIn">计算公式</param>
+            <param name="x">未知数x</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Single[])">
+            <summary>
+            输入公式及未知数，计算结果并返回,若方程有问题，返回-9999.9999
+            </summary>
+            <param name="functionIn">计算公式，未知数为x1,x2……xn</param>
+            <param name="datasIn">保存x1……xn的值，按x后的序号排序，其中[0]存放x1</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Double)">
+            <summary>
+            输入公式及未知数，计算结果并返回
+            </summary>
+            <param name="functionIn">计算公式</param>
+            <param name="x">未知数x</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CalculateFunction(System.String,System.Double[])">
+            <summary>
+            输入公式及未知数，计算结果并返回,若方程有问题，返回-9999.9999
+            </summary>
+            <param name="functionIn">计算公式，未知数为x1,x2……xn</param>
+            <param name="datasIn">保存x1……xn的值，按x后的序号排序，其中[0]存放x1</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.priorityHigher(System.String,System.String)">
+            <summary>
+            判断运算符1优先级是否高于运算符2
+            </summary>
+            <param name="operator1">运算符1</param>
+            <param name="operator2">运算符2</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.SingleCalculate(System.Double,System.String,System.Double)">
+            <summary>
+            进行一次二目运算
+            </summary>
+            <param name="value1">数据1</param>
+            <param name="operatorStr">运算符</param>
+            <param name="value2">数据2</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.AnalyseFunction(System.String,System.Collections.Generic.Queue{System.Object}@,System.Double[])">
+            <summary>
+            分析公式是否合理
+            </summary>
+            <param name="functionIn">计算公式</param>
+            <param name="dataQueIn">数据队列</param>
+            <param name="datasIn">未知数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.DataEnQueue(System.String,System.Collections.Generic.Queue{System.Object}@,System.Double[])">
+            <summary>
+            数据入队列
+            </summary>
+            <param name="dataStr"></param>
+            <param name="dataQueIn"></param>
+            <param name="datasIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.CheckFunctionOpera(System.Collections.Generic.Queue{System.String})">
+            <summary>
+            检查语法
+            </summary>
+            <param name="operaQueIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.LinearRegression(System.Decimal[0:,0:],System.Decimal@,System.Decimal@)">
+            <summary>
+            使用最小二乘法计算,拟合式为 y = kx + b 
+            </summary>
+            <param name="datasIn">点列表，每个decimal数组代表一个点，dateIn[][0]为x值，dataIn[][1]为y值</param>
+            <param name="k">返回线性拟合曲线斜率</param>
+            <param name="b">返回线性拟合曲线截距</param>
+            <returns>相关系数，若传入数据有误，返回0</returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.LinearRegression(System.Double[0:,0:],System.Double@,System.Double@)">
+            <summary>
+            
+            </summary>
+            <param name="datasIn"></param>
+            <param name="k"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.StbValue(System.Collections.Generic.List{System.Decimal})">
+            <summary>
+            计数数据稳定度,公式为:sqrt(sum(xi - avg(x) * (xi - avg(x))) / (n - 1))
+            </summary>
+            <param name="valLstIn">待统计数据</param>
+            <returns>稳定度</returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.FillSQLPara(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            把参数填入sql语句中，返回完整的sql语句
+            </summary>
+            <param name="sql"></param>
+            <param name="parasIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.GetAbsPath(System.String)">
+            <summary>
+            获得路径的绝对地址
+            </summary>
+            <param name="pathIn">路径，以\\开头的话为相对地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.Decipher(System.Byte[],System.String)">
+            <summary>
+            以异或方式解密字符串
+            </summary>
+            <param name="bodyIn">待解密字符串</param>
+            <param name="passWordIn">密码</param>
+            <returns>解密后字符串</returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.Encripher(System.Byte[],System.String)">
+            <summary>
+            以异或方式加密字符串
+            </summary>
+            <param name="bodyIn">待加密字符串</param>
+            <param name="passWordIn">密码</param>
+            <returns>加密后字符串</returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.ReadFile_ToByte(System.String)">
+            <summary>
+            读入文件，返回BYTE的形式
+            </summary>
+            <param name="filePathName">文件地址</param>
+            <returns>文件正文</returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.ReadFile_ToString(System.String)">
+            <summary>
+            读入文件，返回string的形式
+            </summary>
+            <param name="filePathName">文件地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.WriteFile(System.String,System.Object,System.Boolean,System.Text.Encoding)">
+            <summary>
+            输出一个字段到文件
+            </summary>
+            <param name="filePath">文件名称</param>
+            <param name="fileBody">文件正文</param>
+            <param name="Encoding">文件编码方式</param>
+            <param name="Cover">是否覆盖原有文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.GetFiles(System.String,System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            获得任务文件，若路径是文件夹，只返回指定扩展名的文件，两个路径参数中只有一个起效，pathIn优先，但不能两个都为空
+            </summary>
+            <param name="KeyWord">config中路径的key</param>
+            <param name="PathIn">路径地址</param>
+            <param name="ExtensionNames">文件扩展名,用|分隔，如.xml|.txt</param>
+            <param name="option">搜索当前项目，还是包含子项目</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.WriteIniValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            写出一个ini字段
+            </summary>
+            <param name="section">要写入的段落名</param>
+            <param name="key">要写入的键，如果该key存在则覆盖写入</param>
+            <param name="val">key所对应的值</param>
+            <param name="filePath">INI文件的完整路径和文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.ReadIniValue(System.String,System.String,System.String)">
+            <summary>
+            读入ini字段
+            </summary>
+            <param name="section">要读取的段落名</param>
+            <param name="key">要读取的键</param>
+            <param name="filePath">INI文件的完整路径和文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写出一个ini字段
+            </summary>
+            <param name="section">要写入的段落名</param>
+            <param name="key">要写入的键，如果该key存在则覆盖写入</param>
+            <param name="val">key所对应的值</param>
+            <param name="filePath">INI文件的完整路径和文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读入ini字段
+            </summary>
+            <param name="section">要读取的段落名</param>
+            <param name="key">要读取的键</param>
+            <param name="defVal">读取异常的情况下的缺省值</param>
+            <param name="retVal">key所对应的值，如果该key不存在则返回空值</param>
+            <param name="size">值允许的大小</param>
+            <param name="filePath">INI文件的完整路径和文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.ZipFileDictory(System.String,System.String,System.String)">
+            <summary>
+            压缩目录
+            </summary>
+            <param name="FolderToZip">待压缩的文件夹，全路径格式</param>
+            <param name="ZipedFile">压缩后的文件名，全路径格式</param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.ZipFile(System.String,System.String,System.String)">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="FileToZip">要进行压缩的文件名</param>
+            <param name="ZipedFile">压缩后生成的压缩文件名</param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.Zip(System.String,System.String,System.String)">
+            <summary>
+            压缩文件 和 文件夹
+            </summary>
+            <param name="FileToZip">待压缩的文件或文件夹</param>
+            <param name="ZipedFile">压缩后生成的压缩文件名，全路径格式</param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Helper.UnZip(System.String,System.String,System.String)">
+            <summary>
+            解压功能(解压压缩文件到指定目录)
+            </summary>
+            <param name="FileToUpZip">待解压的文件</param>
+            <param name="ZipedFolder">指定解压目标目录</param>
+            <param name="Password"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.MD5Tool.MD5Encrypt(System.String,System.String)">
+            MD5加密 
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.MD5Tool.MD5Decrypt(System.String,System.String)">
+            MD5解密 
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.MD5Tool.key">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ITaskGroup.cycleTime">
+            <summary>
+            任务组两次启动之间的时间间隔，如每周任务的话就设为7天
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ITaskGroup.intervalTime">
+            <summary>
+            任务组内部，前后两个任务间启动的时间间隔，设为半小时的话，上一个任务启动(而不是结束)半小时后下一个任务启动
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ITaskGroup.Priority">
+            <summary>
+            任务优先级，默认为5，数值越大则优先级越高，只是预留属性，当前并未起作用
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ITaskGroup.RepeatTimes">
+            <summary>
+            任务重复次数，若为0则不会启动任务，若为无限次重复，设为-99
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.ITaskGroup.startTime">
+            <summary>
+            任务组第一次启动时间
+            </summary>
+        </member>
+        <!-- 对于成员“P:sysu.AQM.MonitorBase.ITaskGroup.TaskDic”忽略有格式错误的 XML 注释 -->
+        <member name="P:sysu.AQM.MonitorBase.ITaskGroup.TaskGroupName">
+            <summary>
+            任务组名称
+            </summary>
+        </member>
+        <!-- 对于成员“T:sysu.AQM.MonitorBase.IparaDictionary”忽略有格式错误的 XML 注释 -->
+        <member name="M:sysu.AQM.MonitorBase.IparaDictionary.Add(System.String,System.Object,System.Object,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            根据各输入参数创建一个参数并添加到字典
+            </summary>
+            <param name="NameIn"></param>
+            <param name="valueIn"></param>
+            <param name="defaultValIn"></param>
+            <param name="DescribtionIn"></param>
+            <param name="sourceIn"></param>
+            <param name="autoSet">参数是否自动设置，若为true在有些时候不能修改</param>
+            <param name="cover">是否覆盖原有值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IparaDictionary.Add(sysu.AQM.MonitorBase.paraDictionary,System.Boolean)">
+            <summary>
+            添加另外一个字典内所有参数到本字典
+            </summary>
+            <param name="paraDicIn"></param>
+            <param name="cover">是否覆盖原有值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IparaDictionary.Add(sysu.AQM.MonitorBase.Parameter,System.Boolean)">
+            <summary>
+            添加一个参数到字典
+            </summary>
+            <param name="paraIn"></param>
+            <param name="cover">是否覆盖原有值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IparaDictionary.Contain(System.String)">
+            <summary>
+            根据参数名称判断该参数是否包含在字典中
+            </summary>
+            <param name="paraName">对应Parameter中的Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IparaDictionary.Remove(System.String)">
+            <summary>
+            删除一个参数
+            </summary>
+            <param name="KeyIn">对应Parameter中的Name</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IparaDictionary.Remove(sysu.AQM.MonitorBase.Parameter)">
+            <summary>
+            删除一个参数
+            </summary>
+            <param name="parameterIn"></param>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.IParameter">
+            <summary>
+            记录任务组中任务的信息时的接口
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IParameter.CopyFrom(sysu.AQM.MonitorBase.Parameter)">
+            <summary>
+            从一个参数实例复制所有内容
+            </summary>
+            <param name="parameterIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IParameter.ToString">
+            <summary>
+            参数转化为默认格式的string，可用Parse读入,格式为:name//value//defaultvalue//description//source//autoset
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.IParameter.ToString(System.String)">
+            <summary>
+            参数转换为string
+            </summary>
+            <param name="patternIn">转化格式，关键字为：name value defaultvalue description source autoset</param>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.IParameter.defaultValue">
+            <summary>
+            不填
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.IParameter.Description">
+            <summary>
+            记录保存该任务信息的xml的相对地址，先不填
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.IParameter.Name">
+            <summary>
+            任务名称，格式为:任务组名称_任务脚本名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.IParameter.Source">
+            <summary>
+            不填
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.IParameter.Value">
+            <summary>
+            任务在任务组中的序号，从0开始。任务排列及执行均从0号任务开始
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskEventArgs">
+            <summary>
+            任务事件类的基类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskEventArgs.State">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskEventArgs.#ctor(sysu.AQM.MonitorBase.TaskState,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="stateIn">任务当前状态</param>
+            <param name="interrupt_allowIn">是否允许中断任务</param>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskEventArgs.Interrupt_Allow">
+            <summary>
+            是否运行中断任务
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskState">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskState.Wait">
+            <summary>
+            等待
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskState.Start">
+            <summary>
+            开始运行
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskState.Pause">
+            <summary>
+            中断
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskState.End">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskState.Error">
+            <summary>
+            出错
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskGroup">
+            <summary>
+            任务组
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskGroup._TaskGroupName">
+            <summary>
+            任务组名称
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.iniRanTimes">
+            <summary>
+            设置为未启动过，重新开始计数
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskGroup.Changed">
+            <summary>
+            任务组是否被编辑过
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskGroup.TaskFilePath">
+            <summary>
+            任务信息文件地址
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskGroup.sparePath">
+            <summary>
+            备用文件地址，用于恢复
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskGroup.TaskInfoDictionary">
+            <summary>
+            任务字典，以任务序号为key
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.Sort">
+            <summary>
+            为任务字典排序
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.Remove(System.Int32)">
+            <summary>
+            去除一个任务的信息
+            </summary>
+            <param name="indexIn">任务序号</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.Remove(System.String)">
+            <summary>
+            去除任务的信息
+            </summary>
+            <param name="TaskNameIn">任务名称或脚本名称</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.GetTaskInfo(System.String)">
+            <summary>
+            通过任务名称获得任务参数字典的一个副本
+            </summary>
+            <param name="taskNameIn">任务名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskGroup.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.startTime">
+            <summary>
+            任务开始时间
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.cycleTime">
+            <summary>
+            任务组启动时间间隔
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.intervalTime">
+            <summary>
+            任务执行时间间隔
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.PrivateThread">
+            <summary>
+            是否有独立的运行线程
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.TaskGroupName">
+            <summary>
+            任务组名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.RepeatTimes">
+            <summary>
+            任务计划重复次数
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.RanTimes">
+            <summary>
+             任务已运行次数
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.InUsed">
+            <summary>
+            任务组使用中，false时不添加入任务列表
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.Priority">
+            <summary>
+            任务优先级，默认为5，数值越大则越高
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskGroup.TaskDic">
+            <summary>
+            任务参数,保存格式为：value是任务序号，describtion为任务文件相对于本任务根目录的地址,autoSet表名任务是否完成
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskInfo">
+            <summary>
+            任务信息类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.startTime">
+            <summary>
+            任务开始时间
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.intervalTime">
+            <summary>
+            任务循环时间间隔(秒)
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.TaskScriptName">
+            <summary>
+            任务信息名称
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.SetTaskName(System.String)">
+            <summary>
+            设置任务名称
+            </summary>
+            <param name="taskNameIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.IniRanTimes">
+            <summary>
+            重置运行次数，让任务可以复用
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.TaskFilePath">
+            <summary>
+            任务信息文件地址
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.sparePath">
+            <summary>
+            备用文件地址，用于恢复
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.TaskParameterDic">
+            <summary>
+            任务参数
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskInfo.Interrupt_Allow">
+            <summary>
+            任务是否允许中断
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="taskNameIn">任务名称</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.RunTimeMinus(System.Int32)">
+            <summary>
+            减少运行次数
+            </summary>
+            <param name="times">减少次数</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.CopyFrom(sysu.AQM.MonitorBase.TaskInfo)">
+            <summary>
+            复制任务信息
+            </summary>
+            <param name="taskInfoIn">源信息</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            读入xml
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskInfo.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            写出xml
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskInfo.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskInfo.RepeatTimes">
+            <summary>
+            任务计划重复次数
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskInfo.RanTimes">
+            <summary>
+             任务已运行次数
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskInfo.Priority">
+            <summary>
+            任务优先级，默认为5，数值越大则越高
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.InstrumentBuilder">
+            <summary>
+            创建仪器工厂
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.InstrumentBuilder.SetupInstrument(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,sysu.AQM.MonitorBase.Instrument}@)">
+            <summary>
+            安装仪器
+            </summary>
+            <param name="DevicesIn">从Debug.UI获得的驱动字典</param>
+            <param name="DeviceNameDicIn">驱动名称字典</param>
+            <param name="_InsDic">仪器字典</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.InstrumentBuilder.FillInsInfo(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,sysu.AQM.MonitorBase.Instrument}@)">
+            <summary>
+            修改仪器信息字典，项目为空，待填入仪器具体脚本
+            </summary>
+            <param name="DevicesIn">输入的仪器驱动</param>
+            <param name="DeviceNameDicIn">驱动名称字典</param>
+            <param name="insDicIn">引用的仪器字典</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.InstrumentBuilder.FillScript(System.Object,System.Collections.Generic.Dictionary{System.String,sysu.AQM.MonitorBase.Instrument}@)">
+            <summary>
+            把仪器脚本填入仪器类
+            </summary>
+            <param name="DevicesIn"></param>
+            <param name="insDicIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.InstrumentBuilder.ReadSign(System.Object,System.Collections.Generic.Dictionary{System.String,sysu.AQM.MonitorBase.Instrument}@)">
+            <summary>
+            获得之前留下的标记,或向数据库当期项目的标识项
+            </summary>
+            <param name="DevicesIn"></param>
+            <param name="insDicIn"></param>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.Instrument">
+            <summary>
+            仪器类
+            </summary>
+            <summary>
+            仪器类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Instrument.校准仪">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Instrument.分析仪">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Instrument.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建仪器类
+            </summary>
+            <param name="ItemIn">项目名称</param>
+            <param name="BrandIn"></param>
+            <param name="ModelIn"></param>
+            <param name="KindIn"></param>
+            <param name="SingIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Instrument.SetupDevice(System.String,System.Object)">
+            <summary>
+            安装仪器驱动
+            </summary>
+            <param name="KindIn">驱动类型</param>
+            <param name="DeviceIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Instrument.NeedAlterToRealCondition">
+            <summary>
+            是否需要处理标况转实况
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.DeviceClassName">
+            <summary>
+            所包含的仪器驱动的类名
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.DeviceName">
+            <summary>
+            品牌型号
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Brand">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Item">
+            <summary>
+            项目,大写表示
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.ItemNameOri">
+            <summary>
+            驱动中项目的名称，区分大小写
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Mark">
+            <summary>
+            预留特殊标记，用于同一型号不同驱动
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Sign">
+            <summary>
+            仪器当前标记
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.OriUnit">
+            <summary>
+            仪器单位
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Unit">
+            <summary>
+            入库单位
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.HandSign">
+            <summary>
+            手动强制标识
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.ShowInMainForm">
+            <summary>
+            是否作为实时值在主界面展示
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.Kind">
+            <summary>
+            仪器种类，目前有Analyser及calculator两种
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.CycleSeconds">
+            <summary>
+            项目数采周期，默认为-999，即不进行采集
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.UpdateMethod">
+            <summary>
+            驱动升级方式
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Instrument.DriverReady">
+            <summary>
+            数采驱动已就绪（无需修改驱动或者修改调试完成）
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskParameter">
+            <summary>
+            任务运行后返回信息,在不同模式下有不同的有效字段
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.TaskComplete">
+            <summary>
+            任务是否完成
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.TaskSucceed">
+            <summary>
+            任务是否成功
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.taskMode">
+            <summary>
+            任务运行模式
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.ResultDic">
+            <summary>
+            记录方法将要返回参数的字典
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.InputDic">
+            <summary>
+            记录方法所需参数的字典
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.RecordDic">
+            <summary>
+            记录临时保存参数的参数字典
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.startTime">
+            <summary>
+            任务开始时间
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.endTime">
+            <summary>
+            任务结束时间
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskParameter.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskParameter.#ctor(sysu.AQM.MonitorBase.TaskMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="taskModeIn">任务方式</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskParameter.GetParaValue(System.String)">
+            <summary>
+            根据参数名称获取参数值
+            </summary>
+            <param name="paraNameIn"></param>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskParameter.Mark">
+            <summary>
+            任务标识，注意标识的有效级，应添加相关处理
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.AdvanceDictionary`2">
+            <summary>
+            未启用
+            </summary>
+            <typeparam name="TKey">键类型</typeparam>
+            <typeparam name="TValue">数据类型</typeparam>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.SDictionary`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.SDictionary`2.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.SDictionary`2.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            
+            </summary>
+            <param name="write"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.SDictionary`2.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.SDictionary`2.GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.AdvanceDictionary`2.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.AdvanceDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
+            <summary>
+            
+            </summary>
+            <param name="dicIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.AdvanceDictionary`2.FindIndexByKey(`0)">
+            <summary>
+            通过序号获得关键字
+            </summary>
+            <param name="keyIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.AdvanceDictionary`2.FindKeyByIndex(System.Int32)">
+            <summary>
+            通过关键字获得关键字的序号
+            </summary>
+            <param name="indexIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.AdvanceDictionary`2.CopyFrom(sysu.AQM.MonitorBase.AdvanceDictionary{`0,`1})">
+            <summary>
+            复制一个字典
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.AdvanceDictionary`2.CopyFrom(System.Collections.Generic.Dictionary{`0,`1})">
+            <summary>
+            复制一个字典
+            </summary>
+            <param name="dicIn"></param>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.AdvanceDictionary`2.Item(`0)">
+            <summary>
+            
+            </summary>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.AdvanceDictionary`2.Keys">
+            <summary>
+            关键字列表
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.paraDictionary">
+            <summary>
+            任务字典类
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.ToArray">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Add(System.String,System.Object,System.Object,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            添加参数
+            </summary>
+            <param name="NameIn">参数名称</param>
+            <param name="valueIn">参数内容</param>
+            <param name="defaultValIn">参数默认值</param>
+            <param name="DescribtionIn">参数描述，默认为空</param>
+            <param name="sourceIn">参数来源，默认为空</param>
+            <param name="autoSet">参数是否自动设置，若为true在有些时候不能修改</param>
+            <param name="cover">是否覆盖原有值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Add(sysu.AQM.MonitorBase.Parameter,System.Boolean)">
+            <summary>
+            添加参数
+            </summary>
+            <param name="paraIn">参数实例，若关键字相同则替代</param>
+            <param name="cover">是否覆盖原有值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Add(sysu.AQM.MonitorBase.paraDictionary,System.Boolean)">
+            <summary>
+            添加参数
+            </summary>
+            <param name="paraDicIn">待添加到字典的另一个字典</param>
+            <param name="cover">是否覆盖原有值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.CopyFrom(sysu.AQM.MonitorBase.paraDictionary)">
+            <summary>
+            从一个参数字典复制
+            </summary>
+            <param name="paraDictionaryIn">待复制参数字典</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Remove(System.String)">
+            <summary>
+            去除一个参数
+            </summary>
+            <param name="KeyIn">参数关键字</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Remove(sysu.AQM.MonitorBase.Parameter)">
+            <summary>
+            去除一个参数
+            </summary>
+            <param name="parameterIn">参数</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Remove(System.Func{sysu.AQM.MonitorBase.Parameter,System.Boolean})">
+            <summary>
+            根据条件去除参数
+            </summary>
+            <param name="Method">去除条件的方法</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Clear">
+            <summary>
+            清空所有项目
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Contain(System.String)">
+            <summary>
+            是否包含关键字
+            </summary>
+            <param name="paraName">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.GetParaByIndex(System.Int32)">
+            <summary>
+            通过序号获得字典中的参数
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.Sort(System.Func{sysu.AQM.MonitorBase.Parameter,sysu.AQM.MonitorBase.Parameter,System.Boolean})">
+            <summary>
+            对参数进行排序
+            </summary>
+            <param name="CompareMethod">第一个参数是否应该排在第二个参数之前</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.System#Xml#Serialization#IXmlSerializable#GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.paraDictionary.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.paraDictionary.Count">
+            <summary>
+            参数数目
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.paraDictionary.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.paraDictionary.Keys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.Parameter">
+            <summary>
+            参数类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Parameter.emptyValid">
+            <summary>
+            允许值为""
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Parameter.iniSetFag">
+            <summary>
+            初始化设置，应在初始化后设为false
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Parameter.AutoSet">
+            <summary>
+            是否自动设置参数值,自动设置将不可修改
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Parameter.Tag">
+            <summary>
+            随意用的字段
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.#ctor(System.String,System.Object,System.Object,System.String,System.String,System.Boolean)">
+            <summary>
+            根据数据构造参数
+            </summary>
+            <param name="NameIn">参数名称</param>
+            <param name="ValueIn">参数值</param>
+            <param name="defaultIn">缺省值</param>
+            <param name="describtionIn">参数描述</param>
+            <param name="sourceIn">参数来源</param>
+            <param name="autoSet">参数是否自动设置，自动设置在某些地方不运行修改</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.#ctor(sysu.AQM.MonitorBase.Parameter)">
+            <summary>
+            以另一个参数为原型构造参数
+            </summary>
+            <param name="paraPototypeIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.ToString">
+            <summary>
+            参数转化为默认格式的string，可用Parse读入
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.ToString(System.String)">
+            <summary>
+            参数转换为string
+            </summary>
+            <param name="patternIn">转化格式，关键字为：name value defaultvalue description source autoset</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.Parse(System.String)">
+            <summary>
+            合乎格式的string转化为parameter类的实例，转化失败返回null
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.CopyFrom(sysu.AQM.MonitorBase.Parameter)">
+            <summary>
+            复制一个参数
+            </summary>
+            <param name="parameterIn">待复制参数</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.Parameter.GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Parameter.Name">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Parameter.Value">
+            <summary>
+            参数值
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Parameter.Description">
+            <summary>
+            参数描述,可用于描述参数作用，作为任务输出的打印参数时，用于记录参数打印的地址
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Parameter.Source">
+            <summary>
+            参数来源
+            </summary>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.Parameter.defaultValue">
+            <summary>
+            缺省值
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskMode">
+            <summary>
+            运行模式,分为查询模式、设置模式、运行模式
+            设置模式(SetPara)下，将返回需要设置的参数
+            运行模式下(Run)，将按照当前的参数运行此任务
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskMode.SetPara">
+            <summary>
+            返回任务所需参数
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskMode.Run">
+            <summary>
+            任务运行
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.TaskMode.Default">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.Sign">
+            <summary>
+            标记类
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Sign.sign">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Sign.priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="F:sysu.AQM.MonitorBase.Sign.description">
+            <summary>
+            标识描述
+            </summary>
+        </member>
+        <member name="T:sysu.AQM.MonitorBase.TaskScriptInterface">
+            <summary>
+            任务脚本接口
+            </summary>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Run(sysu.AQM.MonitorBase.TaskMode,sysu.AQM.MonitorBase.TaskParameter)">
+            <summary>
+            运行本任务脚本
+            </summary>
+            <param name="taskModeIn">任务运行模式</param>
+            <param name="taskParaIn">任务运行参数，若为null，则使用本实例自带参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.FindTaskName">
+            <summary>
+            找出所能运行任务的名字
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.SetParameter(sysu.AQM.MonitorBase.paraDictionary,System.Boolean)">
+            <summary>
+            输入任务运行参数
+            </summary>
+            <param name="paraDicIn">输入参数</param>
+            <param name="UseDefaultValue">是否使用默认值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.FindParameters">
+            <summary>
+            获得目前仪器所需的各种参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.InitializeTask(sysu.AQM.MonitorBase.TaskMode)">
+            <summary>
+            初始化任务
+            </summary>
+            <param name="taskModeIn">任务模式</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.SetName(System.String,System.String)">
+            <summary>
+            设置所属任务组与任务的名称
+            </summary>
+            <param name="TaskGroupNameIn">任务组名称</param>
+            <param name="TaskNameIn">任务名称，注意是任务组中任务的名称，与脚本的名称不一定一样</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.TaskDispose">
+            <summary>
+            任务完成后的处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.RegeditDebugAction(System.Action{System.String,System.String})">
+            <summary>
+            注册debug时间，以返回debug信息
+            </summary>
+            <param name="actionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.UnregeditDebugAction(System.Action{System.String,System.String})">
+            <summary>
+            反注册debug事件
+            </summary>
+            <param name="actionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.WriteInsDbg(System.String)">
+            <summary>
+            触发debug语句写出事件，写出从仪器传来的dubug语句
+            </summary>
+            <param name="debugInfoIn">从仪器传来的dubug语句</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.SetTaskCheck(System.Boolean)">
+            <summary>
+            设置任务运行模式为检查参数，不涉及到具体仪器的调用
+            </summary>
+            <param name="taskCheck"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.RegeditStepDescribeAction(System.Action{System.String})">
+            <summary>
+            注册步骤描述事件
+            </summary>
+            <param name="ActionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.LogOutStepDescribeAction(System.Action{System.String})">
+            <summary>
+            注销步骤描述事件
+            </summary>
+            <param name="ActionIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.RequirePara(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            返回任务要求的参数
+            </summary>
+            <param name="parameterName">参数名称</param>
+            <param name="defaultValue">参数默认值，可以为空</param>
+            <param name="describtion">参数描述</param>
+            <param name="changeEnable">是否允许在修改窗体中设置参数值</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.InsRun(System.String,System.String,System.Object[],System.String)">
+            <summary>
+            根据项目名称及任务名称，执行一项仪器的一个任务
+            </summary>
+            <param name="itemNameIn">项目名称</param>
+            <param name="TaskNameIn">任务名称</param>
+            <param name="parametersIn">任务执行参数</param>
+            <param name="valueType">返回类型，不填返回null，"decimal"/"int"/"double"/"float"返回数字,"bool"返回bool</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.ReturnData(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            返回任务数据
+            </summary>
+            <param name="dataName">数据名称</param>
+            <param name="value">数据值</param>
+            <param name="describtion">数据描述</param>
+            <param name="cover">有相同项时是否覆盖,false时附加在原值后面,以空格隔开</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.GetPara(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            获得参数值
+            </summary>
+            <param name="parameterNameIn">参数名称</param>
+            <param name="defaultValueIn">默认值，若参数不存在则返回此值</param>
+            <param name="valueType">返回类型，不填返回null，"decimal"/"int"/"double"/"float"返回数字,"bool"返回bool</param>
+            <param name="showDebugInfo">是否展示调试信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Sign(System.String,System.String,System.Boolean)">
+            <summary>
+            标识操作
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Sign">待添加标识</param>
+            <param name="AddSignFlag">添加标记还是删除标记的布尔值，true为添加标记,false为删除标记</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Record(System.String,System.Object,System.String)">
+            <summary>
+            记录一项内容，可留待下次使用GetParameter函数读出，重名会覆盖
+            </summary>
+            <param name="dataName">内容名称</param>
+            <param name="value">内容值</param>
+            <param name="describtion">内容描述</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.CorrectFunction(System.Decimal,System.String,System.String,System.Boolean)">
+            <summary>
+            把参数按照线性方程进行修正
+            </summary>
+            <param name="originValue">待修正参数</param>
+            <param name="slopeName">斜率参数名称，若无，设为1</param>
+            <param name="interceptName">截距参数名称，若无，设为0</param>
+            <param name="positive">为false时，进行修正方程的逆运算，返回修正前的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.GetPrinter(System.String)">
+            <summary>
+            根据模板文件名称获得一个打印实例
+            </summary>
+            <param name="modeNameIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.GetSign(System.String)">
+            <summary>
+            获得项目当前标记
+            </summary>
+            <param name="itemIn">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Ins(System.String)">
+            <summary>
+            获得一台仪器及其参数
+            </summary>
+            <param name="insName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.alert(System.Object)">
+            <summary>
+            显示对话框
+            </summary>
+            <param name="valuIn"></param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Sleep(System.Int32)">
+            <summary>
+            进程睡眠一段时间
+            </summary>
+            <param name="millisecondIn">睡眠时间，以毫秒为单位</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.StepDescribe(System.String)">
+            <summary>
+            脚本进行步骤的描述，用于说明解析，与具体执行无关
+            </summary>
+            <param name="descirbeIn">描述语句</param>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Send(System.String,System.String)">
+            <summary>
+            向项目所代表的仪器发送一个数据，ASCII码形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Value">发送内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.SendHex(System.String,System.String)">
+            <summary>
+            向项目所代表的仪器发送一个数据，16进制形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <param name="Value">发送内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.Receive(System.String)">
+            <summary>
+            接收所有返回值，ASCII形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.ReceiveHex(System.String)">
+            <summary>
+            接收所有返回值，十六进制形式
+            </summary>
+            <param name="itemName">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:sysu.AQM.MonitorBase.TaskScriptInterface.GetParaNames">
+            <summary>
+            获得任务组所有可获得的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:sysu.AQM.MonitorBase.TaskScriptInterface.TaskName">
+            <summary>
+            任务名称，可作为最基本最可靠的辨析
+            </summary>
+        </member>
+    </members>
+</doc>
