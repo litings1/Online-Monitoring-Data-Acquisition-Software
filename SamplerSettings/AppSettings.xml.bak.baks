@@ -1,0 +1,3370 @@
+<?xml version="1.0"?>
+<AppSettings>
+  <SamplingPeriod>
+    <int>15</int>
+  </SamplingPeriod>
+  <Order>
+    <Item>
+      <string>PM2.5</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>5</SamplingPeriod>
+      <DriverName>PM2.5_TE_SHARP5030iQ</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\PM2.5</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM10</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>504</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>μg/m3</SrcUnit>
+      <DestUnit>μg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>25</Address>
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>3000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>PM10</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>30</SamplingPeriod>
+      <DriverName>PM10_TE_5014</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\PM10</DriverFolder>
+      <FactBrand>TE</FactBrand>
+      <FactSeries>5014</FactSeries>
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>1000</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM4</PortName>
+      <BaudRate>4800</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>μg/m3</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>1000</RangeH>
+      <AlarmL>-5</AlarmL>
+      <AlarmH>5000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>O3</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>O3_TE_49</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\O3</DriverFolder>
+      <FactBrand>TE</FactBrand>
+      <FactSeries>49</FactSeries>
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM3</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>-10</AlarmL>
+      <AlarmH>1000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>气压</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>气压_LUFFT_WS500_BINARY</DriverName>
+      <DriverFolder>仪器库\驱动库\气象\气压</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM12</PortName>
+      <BaudRate>19200</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>hPa</SrcUnit>
+      <DestUnit>hPa</DestUnit>
+      <DispUnit>kPa</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>900</RangeL>
+      <RangeH>1100</RangeH>
+      <AlarmL>900</AlarmL>
+      <AlarmH>1100</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>气温</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>10</SamplingPeriod>
+      <DriverName>气温_LUFFT_WS500_BINARY</DriverName>
+      <DriverFolder>仪器库\驱动库\气象\气温</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM12</PortName>
+      <BaudRate>19200</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>℃</SrcUnit>
+      <DestUnit>℃</DestUnit>
+      <DispUnit>℃</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>-50</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>-50</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>湿度</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>10</SamplingPeriod>
+      <DriverName>湿度_LUFFT_WS500_BINARY</DriverName>
+      <DriverFolder>仪器库\驱动库\气象\湿度</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM12</PortName>
+      <BaudRate>19200</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>%</SrcUnit>
+      <DestUnit>%</DestUnit>
+      <DispUnit>%</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>100</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>100</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>风向</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>5</SamplingPeriod>
+      <DriverName>风向_LUFFT_WS500_BINARY</DriverName>
+      <DriverFolder>仪器库\驱动库\气象\风向</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM12</PortName>
+      <BaudRate>19200</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>°</SrcUnit>
+      <DestUnit>°</DestUnit>
+      <DispUnit>°</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>360</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>360</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>风速</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>5</SamplingPeriod>
+      <DriverName>风速_LUFFT_WS500_BINARY</DriverName>
+      <DriverFolder>仪器库\驱动库\气象\风速</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM12</PortName>
+      <BaudRate>19200</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>m/s</SrcUnit>
+      <DestUnit>m/s</DestUnit>
+      <DispUnit>m/s</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>CO</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>CO_TE_48</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\CO</DriverFolder>
+      <FactBrand>TE</FactBrand>
+      <FactSeries>48</FactSeries>
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM10</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>169.254.169.168</IPAddress>
+      <Port>2</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppm</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>300</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>-1</AlarmL>
+      <AlarmH>25</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>NO2</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NO2_TE_42</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\NO2</DriverFolder>
+      <FactBrand>TE</FactBrand>
+      <FactSeries>42</FactSeries>
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM2</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>-10</AlarmL>
+      <AlarmH>1000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>SO2</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>SO2_TE_43</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\SO2</DriverFolder>
+      <FactBrand>TE</FactBrand>
+      <FactSeries>43</FactSeries>
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM13</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>-14</AlarmL>
+      <AlarmH>2000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>5</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>NO</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NO_TE_42</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\NO</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM2</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>ppb</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>42</Address>
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>-6</AlarmL>
+      <AlarmH>1000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>NOx</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NOx_TE_42</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\NOx</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>串口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM2</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>15.6.53.18</IPAddress>
+      <Port>0</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>mg/m3</DestUnit>
+      <DispUnit>ppb</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>true</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>42</Address>
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>1000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>PM2.5-01</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>5</SamplingPeriod>
+      <DriverName>PM2.5_TE_SHARP5030iQ</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\PM2.5-01</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>504</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>μg/m3</SrcUnit>
+      <DestUnit>μg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>1000</RangeH>
+      <AlarmL>-5</AlarmL>
+      <AlarmH>3000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>PM2.5-02</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>5</SamplingPeriod>
+      <DriverName>PM2.5_TE_SHARP5030iQ</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\PM2.5-02</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>504</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>μg/m3</SrcUnit>
+      <DestUnit>μg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>1000</RangeH>
+      <AlarmL>-5</AlarmL>
+      <AlarmH>3000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>CH4</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>CH4_TE_5900A_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\温室气体\CH4</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppm</SrcUnit>
+      <DestUnit>ppb</DestUnit>
+      <DispUnit>ppb</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>357.14</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>NMHC</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_ADVANTECH_ADAM4017</DriverName>
+      <DriverFolder>仪器库\驱动库\温室气体\NMHC</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>ppb</DestUnit>
+      <DispUnit>ppb</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>500</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>357.14</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>TVOC</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>TVOC_TE_5900_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\温室气体\TVOC</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppm</SrcUnit>
+      <DispUnit>ppm</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>0</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>0</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>PM2.5-03</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>PM2.5_TE_SHARP5030iQ</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\PM2.5-03</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>504</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>μg/m3</SrcUnit>
+      <DestUnit>μg/m3</DestUnit>
+      <DispUnit>μg/m3</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>1000</RangeH>
+      <AlarmL>-5</AlarmL>
+      <AlarmH>3000</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>汽车流量</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>PM2.5_TE_SHARP5030iQ</DriverName>
+      <DriverFolder>仪器库\驱动库\气象\汽车流量</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>504</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>0</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>0</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>乙烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\乙烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>ppb</DestUnit>
+      <DispUnit>ppb</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>true</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>1</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>乙炔</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\乙炔</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>2</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>丙烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\丙烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>3</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>异丁烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\异丁烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>4</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正丁烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正丁烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>5</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>丙烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>C:\Program Files (x86)\sysu.AQM\AQM\仪器库\驱动库\污染物\丙烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>6</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>异戊二烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\异戊二烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>7</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>乙烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\乙烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>反-2-丁烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\反-2-丁烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>顺-2-丁烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\顺-2-丁烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>异戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\异戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>反-2-戊烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\反-2-戊烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>1-丁烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\1-丁烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>环戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\环戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>顺-2-戊烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\顺-2-戊烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>1-戊烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\1-戊烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>16</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2,3-二甲基丁烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2,3-二甲基丁烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>17</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2,2-二甲基丁烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2,2-二甲基丁烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>18</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>19</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2,4-二甲基戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2,4-二甲基戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>20</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>3-甲基戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\3-甲基戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>21</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2-甲基戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2-甲基戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>22</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>甲基环戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\甲基环戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正己烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正己烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>24</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>1-己烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\1-己烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>25</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2,3-二甲基戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2,3-二甲基戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>26</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2-甲基己烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2-甲基己烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>27</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>3-甲基己烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\3-甲基己烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>28</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>29</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2,2,4-三甲基戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2,2,4-三甲基戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>30</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>环己烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\环己烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正庚烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正庚烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>32</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>甲基环己烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\甲基环己烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2,3,4-三甲基戊烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2,3,4-三甲基戊烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>34</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>2-甲基庚烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\2-甲基庚烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>35</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>3-甲基庚烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\3-甲基庚烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>36</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正壬烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正壬烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>37</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>苯乙烯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\苯乙烯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>38</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>异丙苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\异丙苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正丙苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正丙苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>40</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>间乙基甲苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\间乙基甲苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>41</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>对乙基甲苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\对乙基甲苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>1,3,5-三甲基苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\1,3,5-三甲基苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>邻乙基甲苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\邻乙基甲苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>44</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>1,2,4-三甲基苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\1,2,4-三甲基苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>1,2,3-三甲基苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\1,2,3-三甲基苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit>ppb</SrcUnit>
+      <DestUnit>ppb</DestUnit>
+      <DispUnit>ppb</DispUnit>
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>癸烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\癸烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>47</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>间二乙苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\间二乙苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>对二乙苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\对二乙苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>十一烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\十一烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>甲苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\甲苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正辛烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正辛烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>52</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>邻二甲苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\邻二甲苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>53</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>乙苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\乙苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>间，对-二甲苯</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\间，对-二甲苯</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address />
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+  <Order>
+    <Item>
+      <string>正十二烷</string>
+    </Item>
+    <SingleArgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <SamplingPeriod>15</SamplingPeriod>
+      <DriverName>NMHC_TE_5900C_Modbus</DriverName>
+      <DriverFolder>仪器库\驱动库\污染物\正十二烷</DriverFolder>
+      <FactBrand />
+      <FactSeries />
+      <TimeToLive>60</TimeToLive>
+      <MediumType>网口</MediumType>
+      <DelayTime>500</DelayTime>
+      <DelayCount>4</DelayCount>
+      <PortName>COM1</PortName>
+      <BaudRate>9600</BaudRate>
+      <Parity>None</Parity>
+      <DataBits>8</DataBits>
+      <StopBits>One</StopBits>
+      <RTS>true</RTS>
+      <DTR>true</DTR>
+      <IPAddress>192.168.3.40</IPAddress>
+      <Port>502</Port>
+      <ProtocolType>Tcp</ProtocolType>
+      <SendTimeout>1000</SendTimeout>
+      <ReceiveTimeout>1000</ReceiveTimeout>
+      <Channel>0</Channel>
+      <SrcUnit />
+      <DispUnit />
+      <IsParallel>false</IsParallel>
+      <IsReadAlarm>false</IsReadAlarm>
+      <IsReadStatus>false</IsReadStatus>
+      <IsUpdateReal>true</IsUpdateReal>
+      <UpdateDataType>实时值</UpdateDataType>
+      <MagValveType>内置电磁阀</MagValveType>
+      <Address>56</Address>
+      <RangeL>0</RangeL>
+      <RangeH>50</RangeH>
+      <AlarmL>0</AlarmL>
+      <AlarmH>50</AlarmH>
+      <AnalogL>0</AnalogL>
+      <AnalogH>10</AnalogH>
+    </SingleArgs>
+  </Order>
+</AppSettings>
