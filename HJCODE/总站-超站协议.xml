@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfTransServerSetting_New xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HJ_CODE>
+    <站房温度>z01001</站房温度>
+    <站房湿度>z01004</站房湿度>
+    <NO2>a21004</NO2>
+    <NO>a21003</NO>
+    <NOX>a21002</NOX>
+    <PM2.5>a34004</PM2.5>
+    <PM2.5-01>a34004x018888</PM2.5-01>
+    <CH4>a05002</CH4>
+    <TVOC>a24051</TVOC>
+    <NMHC>a24051</NMHC>
+  </HJ_CODE>
+</ArrayOfTransServerSetting_New>

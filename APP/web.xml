@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfTransServerSetting_New xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <sever>
+    <address>https://oapi.dingtalk.com/robot/send?access_token=c8e08290ca9da10afecc1eb1d8141fb0cad31319d5a348f710ea26b0e45818d6</address>
+    <title>阜阳经开区</title>
+    <onoff>on</onoff>
+  </sever>
+  <sever>
+    <address>http://112.123.8.62:1038/FUYANG/GETwindowsIDS</address>
+    <title>123456</title>
+    <onoff>on</onoff>
+  </sever>
+</ArrayOfTransServerSetting_New>
