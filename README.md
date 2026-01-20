@@ -20,7 +20,7 @@
 ## 🧩 系统总体架构
 
 <p align="center">
-  < img src="/images/ScreenShot_main.png" width="750">
+  ![架构图](images/ScreenShot_main.png)
 </p >
 
 说明：
@@ -35,12 +35,12 @@
 
 ### 主界面
 <p align="center">
-  < img src="images/ui_main.png" width="700">
+  ![主界面](images/ui_main.png)
 </p >
 
 ### 数据监控
 <p align="center">
-  < img src="images/ui_realtime.png" width="700">
+  ![数据监控](images/ui_realtime.png)
 </p >
 
 ---
@@ -48,8 +48,8 @@
 ## 🔌 支持的仪器（示例）
 
 <p align="center">
-  < img src="images/device_1.jpg" width="280">
-  < img src="images/device_2.jpg" width="280">
+  ![设备1](images/device_1.jpg)
+  ![设备2](images/device_2.jpg)
 </p >
 
 - NDIR 气体分析仪
@@ -69,7 +69,7 @@
 
 ### 协议设计
 <p align="center">
-  < img src="images/protocol.png" width="650">
+  ![协议设计](images/protocol.png)
 </p >
 
 - 协议抽象层（Protocol Adapter）
