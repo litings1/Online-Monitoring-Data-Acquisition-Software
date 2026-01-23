@@ -56,9 +56,9 @@
 
 **1.室内温湿度计：**
 - **建大仁科**（如用于 温度、C湿度 监测）
+- **安装方式**（需要使用232转485，串口连接）
 - **购买链接(https://e.tb.cn/h.7LRWVUotsDWyKGh?tk=5YLFUge46tp CA381)**
-![NDIR气体分析仪](images/device_1.jpg)
-![VOC在线监测仪](images/device_2.jpg)
+![温湿度计](images/RH/jdrk.png)
 
 **目前已适配的仪器类型包括：**
 - **NDIR 非分光红外气体分析仪**（如用于 CO2、CH4 监测）
