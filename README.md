@@ -20,7 +20,7 @@
 
 ## 🧩 系统总体架构
 
-![系统架构图](images/ScreenShot_main.png)
+![系统架构图](images/main/ScreenShot_main.png)
 
 **架构说明：**
 - **采集服务层**：负责与物理设备的连接、通信管理和原始数据读取。
